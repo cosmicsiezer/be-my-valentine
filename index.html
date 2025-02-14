@@ -4,47 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be My Valentine?</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: pink;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2em;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        button {
-            font-size: 20px;
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        #yes {
-            background-color: red;
-            color: white;
-            font-size: 20px;
-        }
-        #no {
-            background-color: white;
-            color: red;
-            font-size: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Will you be my Valentine? ❤️</h1>
     <div class="buttons">
-        <button id="yes" onclick="alert('Yay! ❤️')">Yes</button>
+        <button id="yes" onclick="showLove()">Yes</button>
         <button id="no" onmouseover="shrinkNo()">No</button>
     </div>
 
@@ -63,6 +28,11 @@
                 noButton.style.display = "none";
             }
         }
+
+        function showLove() {
+            window.location.href = 'yes.html';
+        }
     </script>
 </body>
 </html>
+
