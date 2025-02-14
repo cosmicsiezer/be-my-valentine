@@ -5,16 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be My Valentine?</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            text-align: center;
+        }
+        h1 {
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1> Tanima Will you be my Valentine? ❤️</h1>
+    <h1>Will you be my Valentine? ❤️</h1>
     <div class="buttons" id="buttons-container">
         <button id="yes" onclick="showLove()">Yes</button>
         <button id="no" onclick="multiplyYes()">No</button>
     </div>
 
     <script>
+        let firstClick = true;
         function multiplyYes() {
+            if (firstClick) {
+                alert("You are breaking my heart GOLDFISH");
+                firstClick = false;
+            } else {
+                alert("Na ah nah");
+            }
             let yesButton = document.createElement("button");
             yesButton.innerText = "Yes";
             yesButton.onclick = showLove;
@@ -28,5 +43,4 @@
     </script>
 </body>
 </html>
-
 
