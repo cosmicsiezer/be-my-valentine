@@ -8,25 +8,18 @@
 </head>
 <body>
     <h1>Will you be my Valentine? ❤️</h1>
-    <div class="buttons">
+    <div class="buttons" id="buttons-container">
         <button id="yes" onclick="showLove()">Yes</button>
-        <button id="no" onmouseover="shrinkNo()">No</button>
+        <button id="no" onclick="multiplyYes()">No</button>
     </div>
 
     <script>
-        let yesButton = document.getElementById("yes");
-        let noButton = document.getElementById("no");
-        let yesSize = 20;
-        let noSize = 20;
-
-        function shrinkNo() {
-            noSize -= 2;
-            yesSize += 5;
-            noButton.style.fontSize = noSize + "px";
-            yesButton.style.fontSize = yesSize + "px";
-            if (noSize <= 5) {
-                noButton.style.display = "none";
-            }
+        function multiplyYes() {
+            let yesButton = document.createElement("button");
+            yesButton.innerText = "Yes";
+            yesButton.onclick = showLove;
+            yesButton.style.margin = "5px";
+            document.getElementById("buttons-container").appendChild(yesButton);
         }
 
         function showLove() {
@@ -35,4 +28,5 @@
     </script>
 </body>
 </html>
+
 
